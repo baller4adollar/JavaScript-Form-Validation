@@ -1,0 +1,38 @@
+<!DocType hmtl>
+<html>
+
+<head>
+	<script>
+	function ValidateForm() {
+		var x = document.forms["myForm"]["firstname"].value;
+		var y = document.forms["myForm"]["lastname"].value;
+		var z = document.forms["myForm"]["emailaddress"].value
+		if(x == ""||y==""||z=="") {
+			alert("First enter your first name, last name and email address below");
+		}
+	}
+	</script>
+	<!-- Link for the css file -->
+	<link rel="stylesheet" href="styles.css"> </head>
+
+<body>
+	<!-- Header for the HTML code -->
+	<h1> Nikhil Patel & Co. - Customer Information </h1>
+	<!-- User input with First Name, Last Name and Email Address -->
+	<form name="myForm" onsubmit="ValidateForm()">
+		<label for="firstname"> First Name:</label>
+		<br>
+		<input type="text" id="firstname" name="firstname" value="">
+		<br>
+		<label for="lastname"> Last Name:</label>
+		<br>
+		<input type="text" id="lastname" name="lastname" value="">
+		<br>
+		<label for="email"> Email Address:</label>
+		<br>
+		<input type="text" id="email" name="emailaddress" value="">
+		<br>
+		<!-- Button to submit data -->
+		<input type="submit" value="Submit Data">
+		</form>
+</body>
